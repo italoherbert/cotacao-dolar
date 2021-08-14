@@ -3,15 +3,15 @@
 O sistema de cotação do dolar consome uma API externa do Banco Central do Brasil. 
 
 # Tecnologias utilizadas
-Foi utilizado o framework quarkus e client rest para consumo da API do BCB, bem como do microserviço consumidor do microserviço que consome a API do BCB.
-O swagger foi utilizado para teste da API.
+Foi utilizado o framework quarkus e RestClient para consumo da API do BCB. O RestClient foi utilizado também para o segundo microserviço que consome o primeiro e retorna a devida resposta. 
 
-O docker foi utilizado para criação de containers para cada microserviço.
+O swagger foi utilizado para teste da API o docker foi utilizado para criação de containers para cada microserviço e o QuarkusTest também foi utilizado para testes de integração
 
 # Portas
   
-  Microserviço de consumo da API do BCB: 8080
-  Microserviço que consome o microserviço acima: 8081
+Microserviço de consumo da API do BCB: 8080
+  
+Microserviço que consome o microserviço acima: 8081
 
 # swagger
 
