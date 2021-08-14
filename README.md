@@ -1,4 +1,4 @@
-# Sistema de cotacao do dolar
+# Sistema de cotação do dolar
 
 O sistema de cotação do dolar consome uma API externa do Banco Central do Brasil. 
 
