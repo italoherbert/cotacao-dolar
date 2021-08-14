@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: cotacao.dolar.consumidor.CotacaoDolarTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 5.546 s <<< FAILURE! - in cotacao.dolar.consumidor.CotacaoDolarTest
+teste  Time elapsed: 5.54 s  <<< ERROR!
+java.net.ConnectException: Connection refused: connect
+	at cotacao.dolar.consumidor.CotacaoDolarTest.teste(CotacaoDolarTest.java:13)
+

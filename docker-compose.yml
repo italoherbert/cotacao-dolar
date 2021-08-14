@@ -1,0 +1,31 @@
+version: "3.9"
+services:
+    cotacao-dolar-produtor:            
+        container_name: cotacao-dolar-produtor
+        image: openjdk:latest
+        entrypoint: /bin/bash
+        command: -c "java -jar /opt/cotacao-dolar/cotacaodolar.jar"
+        expose:
+          - 8080
+        ports:
+          - "8080:8080"
+        volumes:
+          - ./cotacao-dolar/target/cotacao-dolar-0.0.1-SNAPSHOT-runner.jar:/opt/cotacao-dolar/cotacaodolar.jar
+          - ./cotacao-dolar/target/lib/:/opt/cotacao-dolar/lib/          
+        
+    cotacao-dolar-consumidor:     
+        depends_on: 
+          - cotacao-dolar-produtor
+        container_name: cotacao-dolar-consumidor
+        image: openjdk:latest
+        entrypoint: /bin/bash
+        command: -c "java -jar /opt/cotacao-dolar-consumidor/cotacaodolar.jar"
+        expose:
+          - 8081
+        ports:
+          - "8081:8081"  
+        volumes:
+          - ./cotacao-dolar-consumidor/target/cotacao-dolar-consumidor-0.0.1-SNAPSHOT-runner.jar:/opt/cotacao-dolar-consumidor/cotacaodolar.jar
+          - ./cotacao-dolar-consumidor/target/lib/:/opt/cotacao-dolar-consumidor/lib/
+        
+          

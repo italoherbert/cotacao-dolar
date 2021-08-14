@@ -1,0 +1,36 @@
+{
+  "openapi" : "3.0.1",
+  "info" : {
+    "title" : "Generated API",
+    "version" : "1.0"
+  },
+  "paths" : {
+    "/cotacao/dolar/get/{dataCotacao}" : {
+      "get" : {
+        "parameters" : [ {
+          "name" : "dataCotacao",
+          "in" : "path",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/components/schemas/String"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "content" : {
+              "application/json" : { }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components" : {
+    "schemas" : {
+      "String" : {
+        "type" : "string"
+      }
+    }
+  }
+}
